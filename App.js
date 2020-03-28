@@ -23,12 +23,17 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import TabScreen from "./src/conpoments/TabScreen"
+import TabNavigation from "./src/conpoments/TabNavigation"
+import GesturePassword from "./src/conpoments/GesturePassword"
 
 const App: () => React$Node = () => {
   return (
     <>
-      <TabScreen/>
+    {/* 手势密码 */}
+     {/* <GesturePassword/> */}
+     {/* 底下四个tab标签 */}
+    <TabNavigation/>   
+     
     </>
   );
 };
