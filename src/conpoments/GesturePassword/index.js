@@ -1,75 +1,86 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { ToastAndroid } from 'react-native';
 import PasswordGesture from 'react-native-gesture-password';
-// var PasswordGesture = require('react-native-gesture-password');
 
 var Password1 = '';
-
 class GesturePassword extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: '请输入你的密码',
+      status: 'normal'
+    }
+  }
 
-        this.state = {
-            message: 'Please input your password.',
-            status: 'normal'
-        }
+  onEnd(password) {
+    if (this.props.fromBackStage == true) {
+      Password1 = '';
+      this.props.changeVisible()
+      return
     }
 
-    onEnd(password) {
-        if ( Password1 === '' ) {
-            // The first password
-            Password1 = password;
-            this.setState({
-                status: 'normal',
-                message: 'Please input your password secondly.'
-            });
-        } else {
-            // The second password
-            if ( password === Password1 ) {
-                this.setState({
-                    status: 'right',
-                    message: 'Your password is set to ' + password
-                });
+    if (Password1 === '') {
+      // The first password
+      Password1 = password;
+      this.setState({
+        status: 'normal',
+        message: '请再次输入你的密码'
+      });
 
-                Password1 = '';
-                // your codes to close this view
-            } else {
-                this.setState({
-                    status: 'wrong',
-                    message:  'Not the same, try again.'
-                });
-            }
-        }
-    }
+    } else {
 
-    onStart() {
-        if ( Password1 === '') {
-            this.setState({
-                message: 'Please input your password.'
-            });
-        } else {
-            this.setState({
-                message: 'Please input your password secondly.'
-            });
-        }
+      // The second password
+      if (password === Password1) {
+        this.setState({
+          status: 'right',
+          message: '你的密码为：' + password
+        }, () => {
+          this.props.changeVisible()
+          ToastAndroid.showWithGravityAndOffset(
+            "手势密码设置成功!",
+            ToastAndroid.LONG,
+            ToastAndroid.CENTER,
+            25,
+            50
+          );
+        });
+
+        Password1 = '';
+        // your codes to close this view
+      } else {
+        this.setState({
+          status: 'wrong',
+          message: '两次密码不一致, 再试一次.'
+        });
+      }
     }
-    
-    render() {
-        return (
-            <PasswordGesture
-                ref='pg'
-                status={this.state.status}
-                message={this.state.message}
-                onStart={() => this.onStart()}
-                onEnd={(password) => this.onEnd(password)}
-                innerCircle={true}
-                outerCircle={true}
-            />
-        );
+  }
+
+  onStart() {
+    if (Password1 === '') {
+      this.setState({
+        message: '请输入你的密码.'
+      });
+    } else {
+      this.setState({
+        message: '请再次输入你的密码.'
+      });
     }
+  }
+
+  render() {
+    return (
+      <PasswordGesture
+        ref='pg'
+        status={this.state.status}
+        message={this.state.message}
+        onStart={() => this.onStart()}
+        onEnd={(password) => this.onEnd(password)}
+        innerCircle={true}
+        outerCircle={true}
+        interval = {1000}
+      />
+    );
+  }
 }
-
-
 export default GesturePassword;
