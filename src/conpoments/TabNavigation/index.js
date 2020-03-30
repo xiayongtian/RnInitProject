@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { createStackNavigator } from '@react-navigation/stack';
 import GesturePassword from "../GesturePassword"
-
+import Setting from "../Setting"
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 // 统一定义颜色样式
@@ -59,9 +59,12 @@ class TabNavigation extends React.Component {
   }
   SettingsScreen = () => {
     return (
-      <View >
-        <Text onPress={() => { this.setGesture("test") }} style={styles.base}>手势密码</Text>
-        {/* <GesturePassword/> */}
+      <View style={{flex: 1}}>
+
+        {/* <Text onPress={() => { this.setGesture("test") }} style={styles.base}>手势密码</Text> */}
+        <Setting/>
+
+
       </View>
     );
   }
