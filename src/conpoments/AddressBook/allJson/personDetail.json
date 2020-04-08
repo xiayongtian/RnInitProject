@@ -1,0 +1,26 @@
+{
+	"code": "2000",
+	"body": {
+		"id": 9313,
+		"personId": "dingyan",
+		"personName": "丁艳",
+		"personGender": -1,
+		"orgId": "JT-XXFW",
+		"orgName": "信息服务中心",
+		"personTitle": "IT治理部",
+		"mobile1": "13552994398",
+		"mobile2": null,
+		"telephone1": "63348849",
+		"telephone2": null,
+		"mail": null,
+		"address": "1409B/C",
+		"sortNum": 270,
+		"companyId": "JT",
+		"companyName": "中国通用技术（集团）控股有限责任公司",
+		"parentOrgId": "JT",
+		"parentOrgName": null,
+		"deptName": "中国通用技术（集团）控股有限责任公司",
+		"showMobile": true,
+		"delete": false
+	}
+}

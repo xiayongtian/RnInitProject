@@ -30,6 +30,7 @@ export default class Login extends Component {
       isContinueValue: "",
       isSl: "",  //up:上拉 down:下拉
       pox: "",  //连续改变方向的峰值
+      fontSizeValue:17
    
     };
 
@@ -134,10 +135,18 @@ export default class Login extends Component {
           }
 
         }
+
+        let step= (150-this.state.loginHeight)/5
         this.setState({
-          pos: _pos
+          pos: _pos,
+          backWidth:70-step,
+          backHeight:70-step,
+          fontSizeValue:17-step/5
         })
 
+      // 70->40
+        //
+        
         
 
       },
@@ -160,10 +169,10 @@ export default class Login extends Component {
       <View style={styles.settingContain} {...this.myPanResponder.panHandlers}>
         <View style={{ height: this.state.loginHeight }}>
           <ImageBackground source={require('../../assets/background.jpg')} style={{ width: '100%', height: '100%' }}>
-            <View style={{ transform:[{ scale: this.state.scaleNum }], flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <View style={{  flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
               <ImageBackground source={require('../../assets/person.jpg')} imageStyle={{ borderRadius: 35 }} style={{ width: this.state.backWidth, height: this.state.backHeight, marginBottom: 5 }}>
               </ImageBackground>
-              <Text ref='loginInfo' style={{ fontSize: 17 }}>请登录{this.state.scaleNum}</Text>
+              <Text ref='loginInfo' style={{ fontSize: this.state.fontSizeValue }}>请登录{this.state.scaleNum}</Text>
             </View>
           </ImageBackground>
         </View>

@@ -1,6 +1,7 @@
 package com.rninitproject;
 
 import android.app.Application;
+
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
@@ -19,12 +20,21 @@ public class MainApplication extends Application implements ReactApplication {
           return BuildConfig.DEBUG;
         }
 
-        @Override
+        // @Override
+        // protected List<ReactPackage> getPackages() {
+        //   return Arrays.<ReactPackage>asList(
+        //       new MainReactPackage(),
+        //         new RNCardViewPackage()
+        //   );
+        // }
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
+          
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+            // List<ReactPackage> packages = new RNCardViewPackage(this).getPackages();
+          // packages.add(new RNCardViewPackage());
           return packages;
         }
 

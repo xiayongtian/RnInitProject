@@ -9,6 +9,7 @@
 import React from 'react';
 import TabNavigation from "./src/conpoments/TabNavigation"
 import GesturePassword from "./src/conpoments/GesturePassword"
+import AddressBook from "./src/conpoments/AddressBook"
 import { AppState } from 'react-native';
 class App extends React.Component {
   constructor(props) {
@@ -54,14 +55,15 @@ class App extends React.Component {
   render() {
     return (
       <>
-        {/* 手势密码  */}
-        {
+     
+        {/* {
           this.state.visible && <GesturePassword fromBackStage={this.state.fromBackStage} changeVisible={() => { this.setVisible(false) }} />
         }
-        {/* 底下四个tab标签  */}
+      
         {
           !this.state.visible && <TabNavigation changeVisible={() => { this.setVisible(true) }} />
-        }
+        } */}
+        {<AddressBook/>}
 
       </>
     );
