@@ -29,19 +29,18 @@ class StepConpment extends Component {
                   <View style={{ marginLeft: 15 ,marginTop:-5}}>
                     <ART.Surface width={24} height={this.state.rowHeight}>
                       {/* {back} */}
-                      <ART.Shape style={{ zoom: 999, opacity: 0.1 }} d={new Path()
+                      <ART.Shape style={{ zoom: 999, }} d={new Path()
                         .moveTo(12, 6)
                         .arc(0, 20, 10)
                         .arc(0, -20, 10)
-                        .close()} fill="#d3e2cf"></ART.Shape>
+                        .close()} fill="#e3d8d8"></ART.Shape>
                       <ART.Shape d={circle} fill={circleColor} stroke="#fff" strokeWidth={2}></ART.Shape>
-                      {/* <ART.Shape d={circle} fill={circleColor} stroke="#e1e1e1" strokeWidth={1}></ART.Shape> */}
-                      <ART.Shape d={line} stroke="#e3d8d8" strokeWidth={2}></ART.Shape>
+                      <ART.Shape d={line} stroke="#e6e6e6" strokeWidth={2}></ART.Shape>
                     </ART.Surface>
 
                   </View>
 
-                  <View style={{ width: '80%', height: 120, marginTop:4, marginLeft: 15, backgroundColor: '#fff', paddingLeft: 20, borderRadius: 10 }}>
+                  <View style={{ width: '80%', height: 120, marginTop:3, marginLeft: 15, backgroundColor: '#fff', paddingLeft: 20, borderRadius: 10 }}>
                     <View style={{ flex: 1, height: 30, flexDirection: 'row', alignItems: 'center'  }}>
                       <Text style={{ fontSize: 19 }}>{item.personName}</Text>
                       <Text style={{ fontSize: 16, color: '#1b90f7', marginLeft: 30 }}>{item.personTitle}</Text>

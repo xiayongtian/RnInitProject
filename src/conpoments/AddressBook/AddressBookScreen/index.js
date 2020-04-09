@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'center',
     textAlignVertical: 'center',
-    backgroundColor: 'pink'
+    // backgroundColor: 'pink'
   },
   clearFont: {
     fontSize: 18,
