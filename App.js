@@ -10,7 +10,7 @@ import React from 'react';
 import TabNavigation from "./src/conpoments/TabNavigation"
 import GesturePassword from "./src/conpoments/GesturePassword"
 import AddressBook from "./src/conpoments/AddressBook"
-import { AppState } from 'react-native';
+import { AppState, BackHandler } from 'react-native';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +20,7 @@ class App extends React.Component {
       fromBackStage: false  //是否从后台进入，true：显示手势密码
     }
   }
+
   _handleAppStateChange = (nextAppState) => {
     if (nextAppState != null && nextAppState === 'active') {
       //如果是true ，表示从后台进入了前台 ，请求数据，刷新页面。或者做其他的逻辑
@@ -55,7 +56,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-     
+
         {/* {
           this.state.visible && <GesturePassword fromBackStage={this.state.fromBackStage} changeVisible={() => { this.setVisible(false) }} />
         }
@@ -63,7 +64,7 @@ class App extends React.Component {
         {
           !this.state.visible && <TabNavigation changeVisible={() => { this.setVisible(true) }} />
         } */}
-        {<AddressBook/>}
+        {<AddressBook />}
 
       </>
     );

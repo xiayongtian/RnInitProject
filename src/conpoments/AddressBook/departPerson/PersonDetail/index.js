@@ -12,7 +12,7 @@ class PersonDetail extends Component {
       <View style={styles.container}>
 
         <View style={[styles.detailItem, { textAlign: 'center', flexDirection: 'row', alignItems: "center" }]}>
-          <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingRight: 40 }}><Text style={{ fontSize: 18, color: '#333333', }}>{personDetail.body.personName}</Text></View>
+          <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingRight: 40 }}><Text style={{ fontSize: 20, color: '#333333', }}>{personDetail.body.personName}</Text></View>
 
           <View style={{ flex: 1, alignItems: 'flex-start' }}>
             <ImageBackground source={require('../../../../assets/image/collect.png')} style={styles.bgStyle}>
@@ -55,15 +55,15 @@ const styles = StyleSheet.create({
 
   },
   bgStyle: {
-    width: 40,
-    height: 40
+    width: 25,
+    height: 25
   },
   item: {
     paddingLeft: 15,
     paddingRight: 10,
     height: 44,
     lineHeight: 44,
-    borderTopWidth: 1,
+    borderBottomWidth: 1,
     borderColor: '#dddddd',
     flex: 1,
     flexDirection: "row"

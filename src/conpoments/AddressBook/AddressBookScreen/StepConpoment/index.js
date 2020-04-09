@@ -1,50 +1,95 @@
 import React, { Component } from 'react';
-import { Text, ART, View, StyleSheet, TextInput, Button, TouchableHighlight, ImageBackground } from 'react-native';
-
+import { Text, ScrollView, ART, View, StyleSheet, TextInput, Button, TouchableHighlight, ImageBackground } from 'react-native';
+import recentVisitList from '../../allJson/recentVisit'
 const { Surface, Shape, Path } = ART;
 class StepConpment extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      rowHeight: 160,
+    }
   }
   render() {
     const line = new Path();
     const circle = new Path();
-    let circleColor = "red";
-    let y = 60
-    line.moveTo(12, 0)
-      .lineTo(12, y).close();
-
-    circle.moveTo(12, 60 * 0.25)
-      .arc(0, 10, 5)
-      .arc(0, -10, 5)
+    let circleColor = "#59c93b";
+    line.moveTo(12, 27).lineTo(12, this.state.rowHeight).close();
+    circle.moveTo(12, 9)
+      .arc(0, 14, 7)
+      .arc(0, -14, 7)
       .close();
+    circleColor = "#1b90f7";
     return (
       <View style={styles.baseStyle}>
-        {/* <View style={styles.stepContain}>
-          <View style={{flex:1}}><Text>123</Text></View>
-          <View style={{flex:4,flexDirection:'row',backgroundColor:'blue'}}>
-            <View style={{width:20,backgroundColor:'gray'}}>
-              <View style={{height:30,backgroundColor:'red'}}><Text>2</Text></View>
-              <View><Text>2</Text></View>
-            </View>
-            <View style={{flex:1,backgroundColor:'pink'}}><Text>213</Text></View>
+        <ScrollView style={{marginTop:30}}>
+          {recentVisitList.body &&
+            recentVisitList.body.map((item, i) => {
+              let sockDiv = (
+                <View style={{ flex: 1, flexDirection: 'row'}}>
+                  <View style={{ marginLeft: 15 ,marginTop:-5}}>
+                    <ART.Surface width={24} height={this.state.rowHeight}>
+                      {/* {back} */}
+                      <ART.Shape style={{ zoom: 999, opacity: 0.1 }} d={new Path()
+                        .moveTo(12, 6)
+                        .arc(0, 20, 10)
+                        .arc(0, -20, 10)
+                        .close()} fill="#d3e2cf"></ART.Shape>
+                      <ART.Shape d={circle} fill={circleColor} stroke="#fff" strokeWidth={2}></ART.Shape>
+                      {/* <ART.Shape d={circle} fill={circleColor} stroke="#e1e1e1" strokeWidth={1}></ART.Shape> */}
+                      <ART.Shape d={line} stroke="#e3d8d8" strokeWidth={2}></ART.Shape>
+                    </ART.Surface>
+
+                  </View>
+
+                  <View style={{ width: '80%', height: 120, marginTop:4, marginLeft: 15, backgroundColor: '#fff', paddingLeft: 20, borderRadius: 10 }}>
+                    <View style={{ flex: 1, height: 30, flexDirection: 'row', alignItems: 'center'  }}>
+                      <Text style={{ fontSize: 19 }}>{item.personName}</Text>
+                      <Text style={{ fontSize: 16, color: '#1b90f7', marginLeft: 30 }}>{item.personTitle}</Text>
+                    </View>
+                    <View style={{ flex: 1, height: 30, flexDirection: 'row', alignItems: 'center' }}>
+                      <Text style={{ fontSize: 13 }}>{item.deptName} | </Text>
+                      <Text style={{ fontSize: 13 }}>{item.orgName}</Text>
+                    </View>
+                    <View style={{ flex: 1, height: 30, flexDirection: 'row', alignItems: 'center' }}>
+                      {item.telephone1 && <ImageBackground source={require('../../../../assets/image/icon_tel.png')} style={styles.bgStyle}>
+                      </ImageBackground>}
+                      {item.telephone1 && <Text style={{ fontSize: 16, width: 150, color: '#1b90f7' }}>{item.telephone1}</Text>}
+
+                      {item.mobile1 && <ImageBackground source={require('../../../../assets/image/icon_tel.png')} style={styles.bgStyle}>
+                      </ImageBackground>}
+                      {item.mobile1 && <Text style={{ fontSize: 16, color: '#1b90f7', }}>{item.mobile1}</Text>}
+                    </View>
+                  </View>
+                </View>
+              );
+              return sockDiv;
+            })}
+
+        </ScrollView>
+
+
+
+
+        {/* <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={{ marginLeft: 15 }}>
+            <ART.Surface width={24} height={this.state.rowHeight}>
+              
+              <ART.Shape style={{ zoom: 999, opacity: 0.1 }} d={new Path()
+                .moveTo(12, 6)
+                .arc(0, 20, 10)
+                .arc(0, -20, 10)
+                .close()} fill="#d3e2cf"></ART.Shape>
+              <ART.Shape d={circle} fill={circleColor} stroke="#e1e1e1" strokeWidth={1}></ART.Shape>
+              <ART.Shape d={line} stroke="#e1e1e1" strokeWidth={4}></ART.Shape>
+            </ART.Surface>
 
           </View>
 
+          <View style={{ width: '80%', height: 50, marginLeft: 20, backgroundColor: 'pink' }}>
+          </View>
         </View> */}
 
 
-        <ART.Surface width={80} height={80}>
-          {/* {back} */}
-          <ART.Shape style={{ zoom: 999, opacity: 0.1 }} d={new Path()
-            .moveTo(12, 6)
-            .arc(0, 30, 10)
-            .arc(0, -30, 10)
-            .close()} fill="#d3e2cf"></ART.Shape>
-          <ART.Shape d={circle} fill={circleColor} stroke="blue" strokeWidth={4}></ART.Shape>
-          <ART.Shape d={line} stroke="yellow" strokeWidth={1}></ART.Shape>
-        </ART.Surface>
       </View>
     );
   }
@@ -53,8 +98,13 @@ const styles = StyleSheet.create({
   baseStyle: {
     backgroundColor: "#f2ecec",
     height: 150,
-    // flex:1,
+    flex: 1,
     // flexDirection:'row'
+  },
+  bgStyle: {
+    width: 17,
+    height: 17,
+    marginRight: 5
   },
   stepContain: {
     flex: 1,

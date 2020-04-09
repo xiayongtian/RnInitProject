@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
 import { Text, View, FlatList, StyleSheet, ImageBackground, Button } from 'react-native';
-import depart from '../../allJson/person.json'
-class Person extends Component {
+import sameDepart from '../allJson/sameDepart.json'
+class SameDepart extends Component {
   constructor(props) {
     super(props);
     this.state = {}
-    console.log(depart)
+
   }
-  stepPersonDetail = () => {
-    this.props.navigation.navigate('PersonDetail')
-  }
+
   render() {
     return (
       <View style={styles.container}>
         <FlatList
-          data={depart.body.personList}
+          data={sameDepart.body.personList}
           renderItem={({ item }) => <View style={styles.item}>
             <View style={{ justifyContent: 'center' }} >
-              <ImageBackground source={require('../../../../assets/image/icon_person.png')} style={styles.bgStyle}>
+              <ImageBackground source={require('../../../assets/image/icon_person.png')} style={styles.bgStyle}>
               </ImageBackground>
             </View>
 
             <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
-              <Text style={{ flex: 2, fontSize: 16 }} onPress={this.stepPersonDetail}>{item.personName}</Text>
-              <Text style={{ flex:5, fontSize: 16 }} onPress={this.stepPersonDetail}>{item.personTitle}</Text>
+              <Text style={{ flex: 2, fontSize: 16 }} >{item.personName}</Text>
+              <Text style={{ flex:5, fontSize: 16 }} >{item.personTitle}</Text>
             </View>
           </View>}
         />
@@ -55,4 +53,4 @@ const styles = StyleSheet.create({
 
   },
 })
-export default Person;
+export default SameDepart;

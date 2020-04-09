@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { Text, View, StyleSheet, Button,BackHandler } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -8,8 +8,11 @@ import AddressBookScreen from "./AddressBookScreen"
 import Depart from "./departPerson/Depart"
 import Person from "./departPerson/Person"
 import PersonDetail from "./departPerson/PersonDetail"
+import SameDepart from "./SameDepart"
 
-
+import Favorite from "./Favorite"
+import Home from "./Home"
+import SearchPerson from "./SearchPerson"
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 // 统一定义颜色样式
@@ -33,12 +36,11 @@ class AddressBook extends React.Component {
     this.state = {
       num: 1,
       rt: "xiwei",
-      headerModeVisible: "screen"
+      headerModeVisible: "none",
+      initRouterName: "AddressBook"
     }
   }
-
-
-
+  
   setScale = () => {
     this.setState({
       // num: 3,
@@ -49,15 +51,18 @@ class AddressBook extends React.Component {
   }
   HomeScreen = () => {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>{this.state.rt}</Text>
-        <Button
-          onPress={() => this.setScale()}
-          title="Learn More"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
+      // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      //   <Text>{this.state.rt}</Text>
+      //   <Button
+      //     onPress={() => this.setScale()}
+      //     title="Learn More"
+      //     color="#841584"
+      //     accessibilityLabel="Learn more about this purple button"
+      //   />
 
+      // </View>
+      <View>
+        <Home/>
       </View>
     );
   }
@@ -72,7 +77,7 @@ class AddressBook extends React.Component {
             headerStyle: {
               backgroundColor
             },
-           
+
             headerTintColor
           }}
         />
@@ -113,34 +118,44 @@ class AddressBook extends React.Component {
       </View>
     )
   }
-  setHeaderMode=()=>{
+  setHeaderMode = () => {
     this.setState({
-      headerModeVisible:'screen'
+      headerModeVisible: 'screen'
     })
+  }
+  back = () => {
+    alert('90')
+    return <View><Text>90</Text></View>
   }
   //  通讯录
   AddressStackScreen = () => {
     return (
       <Stack.Navigator
         headerMode={this.state.headerModeVisible}
-        initialRouteName="AddressBook"
-        mode="modal"
+        initialRouteName={this.state.initRouterName}
+        // headerLeft={this.back}
+        // headerLeft={() => <HeaderBackButton
+        //   title="信息"//返回按钮的标题
+        //   tintColor='white'//返回按钮的颜色
+        //   // onPress={() => navigation.state.params.handleSave()}
+        // />}
+
+
       >
         <Stack.Screen
           name="AddressBook"
-          component={AddressBookScreen}
-          options={{
-            title: '通讯录',
-            headerStyle: {
-              backgroundColor
-            },
-            headerTintColor,
+        // component={AddressBookScreen}
+        // options={{
+        //   title: '通讯录',
+        //   headerStyle: {
+        //     backgroundColor
+        //   },
+        //   headerTintColor,
 
-          }}
-        />
-
-        {/* {props => <AddressBookScreen setHeaderVisible={this.setHeaderMode} headerVisible={this.state.headerModeVisible}/>}
-        </Stack.Screen> */}
+        // }}
+        >
+          {props => <AddressBookScreen {...props} setHeaderVisible={this.setHeaderMode} headerVisible={this.state.headerModeVisible} />}
+        </Stack.Screen>
         {/* 通讯录部门列表 */}
         <Stack.Screen
           name="Depart"
@@ -154,8 +169,8 @@ class AddressBook extends React.Component {
 
           }}
         />
-          {/* 通讯录人员列表 */}
-          <Stack.Screen
+        {/* 通讯录人员列表 */}
+        <Stack.Screen
           name="Person"
           component={Person}
           options={{
@@ -168,10 +183,52 @@ class AddressBook extends React.Component {
           }}
         />
 
-          {/* 通讯录人员详情 */}
-          <Stack.Screen
+        {/* 通讯录人员详情 */}
+        <Stack.Screen
           name="PersonDetail"
           component={PersonDetail}
+          options={{
+            title: '通讯录',
+            headerStyle: {
+              backgroundColor
+            },
+            headerTintColor,
+
+          }}
+        />
+
+        {/* 收藏夹 */}
+        <Stack.Screen
+          name="Favorite"
+          component={Favorite}
+          options={{
+            title: '通讯录',
+            headerStyle: {
+              backgroundColor
+            },
+            headerTintColor,
+
+          }}
+        />
+
+        {/* 同部门 */}
+        <Stack.Screen
+          name="SameDepart"
+          component={SameDepart}
+          options={{
+            title: '通讯录',
+            headerStyle: {
+              backgroundColor
+            },
+            headerTintColor,
+
+          }}
+        />
+
+        {/* 搜索页面 */}
+        <Stack.Screen
+          name="SearchPerson"
+          component={SearchPerson}
           options={{
             title: '通讯录',
             headerStyle: {

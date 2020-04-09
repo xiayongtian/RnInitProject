@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, FlatList, StyleSheet, ImageBackground, Button } from 'react-native';
+import { Text, View, FlatList, StyleSheet, ImageBackground, Button ,BackHandler} from 'react-native';
 import depart from '../../allJson/depart.json'
 class Depart extends Component {
   constructor(props) {
@@ -7,6 +7,8 @@ class Depart extends Component {
     this.state = {}
     console.log(depart)
   }
+
+ 
   stepPerson=()=>{
     this.props.navigation.navigate('Person')
   }
@@ -40,11 +42,13 @@ const styles = StyleSheet.create({
     height: 40
   },
   item: {
-    paddingLeft: 15,
-    paddingRight: 10,
+    paddingLeft: 5,
+    // paddingRight: 10,
+    marginLeft:10,
+    marginRight:10,
     height: 50,
     lineHeight: 50,
-    borderTopWidth: 1,
+    borderBottomWidth: 1,
     borderColor: '#dddddd',
     flex:1,
     flexDirection:"row"
