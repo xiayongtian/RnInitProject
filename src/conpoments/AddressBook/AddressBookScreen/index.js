@@ -81,7 +81,7 @@ class AddressBookScreen extends Component {
 
           <View style={{ flex: 1, height: 60, flexDirection: 'row', paddingLeft: 25, paddingRight: 25 }}>
             <TextInput
-              style={{ flex: 3, height: 40,marginRight: 40, paddingLeft:10,borderRadius: 5, borderColor: '#3385ff', backgroundColor: '#fff', borderWidth: 1 }}
+              style={{ flex: 3, height: 40,marginRight: 20, paddingLeft:10,borderRadius: 5, borderColor: '#3385ff', backgroundColor: '#fff', borderWidth: 1 }}
               onChangeText={text => this.onChangeText(text)}
               onFocus={this.stepSearchPerson}
               inlineImageLeft="search"
@@ -132,7 +132,7 @@ class AddressBookScreen extends Component {
           </View>
         </View>
         {/* 最近访问List */}
-        <View style={{  flex: 5,backgroundColor:'pink' }}>
+        <View style={{  flex: 5 }}>
           <StepConpoment/>
 
         </View>
@@ -142,8 +142,8 @@ class AddressBookScreen extends Component {
 }
 const styles = StyleSheet.create({
   threeItem: {
-    width: 75,
-    height: 75
+    width: 62,
+    height: 62
 
   },
   recentVisit: {

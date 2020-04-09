@@ -40,15 +40,11 @@ const styles = StyleSheet.create({
     //  paddingTop: 22
   },
   detailItem: {
-    // flex:1,
-    // flexDirection:'row',
-    // height: 50,
-    // lineHeight: 50,
     paddingTop: 15,
     paddingBottom: 15,
     borderBottomWidth: 1,
     borderColor: '#dddddd',
-    fontSize: 18,
+    fontSize: 17,
     color: '#333333',
     paddingLeft: 20,
 

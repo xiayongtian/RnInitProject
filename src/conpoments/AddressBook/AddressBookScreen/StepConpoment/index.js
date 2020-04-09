@@ -40,23 +40,23 @@ class StepConpment extends Component {
 
                   </View>
 
-                  <View style={{ width: '80%', height: 120, marginTop:3, marginLeft: 15, backgroundColor: '#fff', paddingLeft: 20, borderRadius: 10 }}>
+                  <View style={{ width: '78%', height: 120, marginTop:3, marginLeft: 15, backgroundColor: '#fff', paddingLeft: 20, borderRadius: 10 }}>
                     <View style={{ flex: 1, height: 30, flexDirection: 'row', alignItems: 'center'  }}>
-                      <Text style={{ fontSize: 19 }}>{item.personName}</Text>
-                      <Text style={{ fontSize: 16, color: '#1b90f7', marginLeft: 30 }}>{item.personTitle}</Text>
+                      <Text style={{ fontSize: 17 }}>{item.personName}</Text>
+                      <Text style={{ fontSize: 14, color: '#1b90f7', marginLeft: 30 }}>{item.personTitle}</Text>
                     </View>
                     <View style={{ flex: 1, height: 30, flexDirection: 'row', alignItems: 'center' }}>
-                      <Text style={{ fontSize: 13 }}>{item.deptName} | </Text>
-                      <Text style={{ fontSize: 13 }}>{item.orgName}</Text>
+                      <Text style={{ fontSize: 14 }}>{item.deptName} | {item.orgName}</Text>
+                      {/* <Text style={{ fontSize: 13 }}></Text> */}
                     </View>
                     <View style={{ flex: 1, height: 30, flexDirection: 'row', alignItems: 'center' }}>
                       {item.telephone1 && <ImageBackground source={require('../../../../assets/image/icon_tel.png')} style={styles.bgStyle}>
                       </ImageBackground>}
-                      {item.telephone1 && <Text style={{ fontSize: 16, width: 150, color: '#1b90f7' }}>{item.telephone1}</Text>}
+                      {item.telephone1 && <Text style={{ fontSize: 14, width: 120, color: '#1b90f7' }}>{item.telephone1}</Text>}
 
                       {item.mobile1 && <ImageBackground source={require('../../../../assets/image/icon_tel.png')} style={styles.bgStyle}>
                       </ImageBackground>}
-                      {item.mobile1 && <Text style={{ fontSize: 16, color: '#1b90f7', }}>{item.mobile1}</Text>}
+                      {item.mobile1 && <Text style={{ fontSize: 14, color: '#1b90f7', }}>{item.mobile1}</Text>}
                     </View>
                   </View>
                 </View>
@@ -65,30 +65,6 @@ class StepConpment extends Component {
             })}
 
         </ScrollView>
-
-
-
-
-        {/* <View style={{ flex: 1, flexDirection: 'row' }}>
-          <View style={{ marginLeft: 15 }}>
-            <ART.Surface width={24} height={this.state.rowHeight}>
-              
-              <ART.Shape style={{ zoom: 999, opacity: 0.1 }} d={new Path()
-                .moveTo(12, 6)
-                .arc(0, 20, 10)
-                .arc(0, -20, 10)
-                .close()} fill="#d3e2cf"></ART.Shape>
-              <ART.Shape d={circle} fill={circleColor} stroke="#e1e1e1" strokeWidth={1}></ART.Shape>
-              <ART.Shape d={line} stroke="#e1e1e1" strokeWidth={4}></ART.Shape>
-            </ART.Surface>
-
-          </View>
-
-          <View style={{ width: '80%', height: 50, marginLeft: 20, backgroundColor: 'pink' }}>
-          </View>
-        </View> */}
-
-
       </View>
     );
   }
@@ -101,9 +77,9 @@ const styles = StyleSheet.create({
     // flexDirection:'row'
   },
   bgStyle: {
-    width: 17,
-    height: 17,
-    marginRight: 5
+    width: 15,
+    height: 15,
+    marginRight:5
   },
   stepContain: {
     flex: 1,
