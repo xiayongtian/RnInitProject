@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, FlatList, StyleSheet, ImageBackground, Button } from 'react-native';
 import personDetail from '../../allJson/personDetail.json'
+// import CallPhone from './CallPhone'
+import TestCustomAlert from './TestCustomAlert'
+
 class PersonDetail extends Component {
   constructor(props) {
     super(props);
@@ -10,24 +13,42 @@ class PersonDetail extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <View>
+          <View style={[styles.detailItem, { textAlign: 'center', flexDirection: 'row', alignItems: "center" }]}>
+            <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingRight: 40 }}><Text style={{ fontSize: 20, color: '#333333', }}>{personDetail.body.personName}</Text></View>
 
-        <View style={[styles.detailItem, { textAlign: 'center', flexDirection: 'row', alignItems: "center" }]}>
-          <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center', paddingRight: 40 }}><Text style={{ fontSize: 20, color: '#333333', }}>{personDetail.body.personName}</Text></View>
+            <View style={{ flex: 1, alignItems: 'flex-start' }}>
+              <ImageBackground source={require('../../../../assets/image/collect.png')} style={styles.bgStyle}>
+              </ImageBackground>
+            </View>
 
-          <View style={{ flex: 1, alignItems: 'flex-start' }}>
-            <ImageBackground source={require('../../../../assets/image/collect.png')} style={styles.bgStyle}>
-            </ImageBackground>
+          </View>
+          <View><Text style={styles.detailItem}><Text>所属公司：</Text><Text>{personDetail.body.companyName}</Text></Text></View>
+          <View><Text style={styles.detailItem}><Text>部        们：</Text>{personDetail.body.orgName}</Text></View>
+          <View><Text style={styles.detailItem}><Text>职        务：</Text>{personDetail.body.personTitle}</Text></View>
+          <View>
+
+            <Text style={styles.detailItem}>
+              <Text>办公地点：</Text>
+              {personDetail.body.address}
+            </Text>
+          </View>
+          <View style={styles.detailItem}>
+            <View style={[{ flex: 1, flexDirection: 'row', paddingBottom: 15, }]}>
+              <View><Text style={{ fontSize: 17 }}>手        机：</Text></View>
+              <View><TestCustomAlert mobile1={personDetail.body.mobile1} /></View>
+
+            </View>
           </View>
 
+          <View style={styles.detailItem}>
+            <View style={[{ flex: 1, flexDirection: 'row', paddingBottom: 15, }]}>
+              <View><Text style={{ fontSize: 17 }}>办公电话：</Text></View>
+              <View><TestCustomAlert mobile1={personDetail.body.telephone1} /></View>
+
+            </View>
+          </View>
         </View>
-        <View><Text style={styles.detailItem}><Text>所属公司：</Text><Text>{personDetail.body.companyName}</Text></Text></View>
-        <View><Text style={styles.detailItem}><Text>部        们：</Text>{personDetail.body.orgName}</Text></View>
-        <View><Text style={styles.detailItem}><Text>职        务：</Text>{personDetail.body.personTitle}</Text></View>
-        <View><Text style={styles.detailItem}><Text>办公地点：</Text>{personDetail.body.address}</Text></View>
-        <View><Text style={styles.detailItem}><Text>手        机：</Text>{personDetail.body.mobile1}</Text></View>
-        <View><Text style={styles.detailItem}><Text>办公电话：</Text>{personDetail.body.telephone1}</Text></View>
-
-
 
       </View>
     );

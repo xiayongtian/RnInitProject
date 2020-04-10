@@ -261,6 +261,7 @@ class AddressBook extends React.Component {
               return <Ionicons name={iconName} size={size} color={color} />;
             },
           })}
+          // backBehavior="none"
 
           tabBarOptions={{
             activeTintColor: backgroundColor,

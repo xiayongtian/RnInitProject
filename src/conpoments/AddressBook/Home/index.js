@@ -6,7 +6,7 @@ import {
   StyleSheet,
   // ART
 } from 'react-native';
-import TimeAxis from './TimeAxis'
+// import TimeAxis from './TimeAxis'
 class Home extends Component {
   state = {}
   render() {
@@ -20,23 +20,7 @@ class Home extends Component {
     ];
     return (
       <View>
-        <TimeAxis
-          itemStyle={{}}
-          rowHeight={60}
-          dataSource={source}
-          row={(rowData, i, count) => {
-            var fontColor = '#757575';
-            if (i == 0) {
-              fontColor = 'green';
-            }
-            return (
-              <View style={{ height: '100%', padding: 5 }}>
-                <Text style={{ color: fontColor, flex: 1 }}>{rowData.Text}</Text>
-                <Text style={{ color: fontColor, alignItems: 'flex-end' }}>{rowData.Time}</Text>
-              </View>
-            );
-          }}
-        />
+      {/* <TimeAxis></TimeAxis> */}
       </View>
     );
   }

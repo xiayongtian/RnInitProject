@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TextInput, Button, TouchableHighlight, ImageBackground ,BackHandler} from 'react-native';
-// import StepConpment from "./StepConpment"
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import StepConpoment from "./StepConpoment"
+import RecentVisit from "./RecentVisit"
 const Stack = createStackNavigator();
 class AddressBookScreen extends Component {
   constructor(props) {
@@ -73,7 +73,7 @@ class AddressBookScreen extends Component {
       <View style={{ flex: 1, flexDirection: 'column' }}>
         {/* 搜索框 */}
 
-        <View style={{ flex: 2, backgroundColor: this.state.bgColor }}>
+        <View style={{ height:135,backgroundColor: this.state.bgColor }}>
           {/* 通讯录 */}
 
          <View style={{ alignItems: 'center', padding: 20, paddingBottom: 30 }}><Text style={{ fontSize: 20, color: "#fff", fontWeight: "700" }}>通讯录</Text></View>
@@ -101,7 +101,7 @@ class AddressBookScreen extends Component {
         </View>
 
         {/* 公司，部们，收藏夹 */}
-        <View style={{ backgroundColor: "#fff", flex: 2 }}>
+        <View style={{ backgroundColor: "#fff", height:135 }}>
 
           {/* 公司 */}
           <View style={{ flex: 3, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
@@ -132,8 +132,8 @@ class AddressBookScreen extends Component {
           </View>
         </View>
         {/* 最近访问List */}
-        <View style={{  flex: 5 }}>
-          <StepConpoment/>
+        <View style={{  flex: 1 }}>
+          <RecentVisit/>
 
         </View>
       </View>
@@ -163,10 +163,12 @@ const styles = StyleSheet.create({
   clearFont: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#1b90f7'
+    color: '#1b90f7',
+    marginRight:10
   },
   recentView: {
-    flex: 1,
+    // flex: 1,
+    height:40,
     backgroundColor: "#fff",
     borderTopWidth: 1,
     borderColor: '#1b90f7',
