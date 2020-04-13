@@ -1,0 +1,70 @@
+{
+	"code": "2000",
+	"body": [
+		{
+			"id": 619,
+			"bgName": "zhihui",
+			"bgTitle": "智慧会务"
+		},
+		{
+			"id": 620,
+			"bgName": "xueyuan",
+			"bgTitle": "创新学院"
+		},
+		{
+			"id": 621,
+			"bgName": "taizhang",
+			"bgTitle": "新集团用印台账"
+		},
+		{
+			"id": 621,
+			"bgName": "Im",
+			"bgTitle": "IM即时通讯"
+		},
+		{
+			"id": 619,
+			"bgName": "cheliang",
+			"bgTitle": "车辆预订申请"
+		},
+		{
+			"id": 620,
+			"bgName": "companyAdmin",
+			"bgTitle": "企业管理"
+		},
+		{
+			"id": 621,
+			"bgName": "kefu",
+			"bgTitle": "热线客服"
+		},
+		{
+			"id": 621,
+			"bgName": "mainData",
+			"bgTitle": "主数据"
+		},
+		{
+			"id": 621,
+			"bgName": "TMS",
+			"bgTitle": "TMS"
+		},
+		{
+			"id": 620,
+			"bgName": "companyAdmin",
+			"bgTitle": "企业管理"
+		},
+		{
+			"id": 621,
+			"bgName": "kefu",
+			"bgTitle": "热线客服"
+		},
+		{
+			"id": 621,
+			"bgName": "mainData",
+			"bgTitle": "主数据"
+		},
+		{
+			"id": 621,
+			"bgName": "TMS",
+			"bgTitle": "TMS"
+		}
+	]
+}

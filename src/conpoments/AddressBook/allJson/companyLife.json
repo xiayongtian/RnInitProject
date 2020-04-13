@@ -1,0 +1,65 @@
+{
+	"code": "2000",
+	"body": [
+		{
+			"id": 619,
+			"bgName": "xinzhonghua",
+			"bgTitle": "新中化"
+		},
+		{
+			"id": 620,
+			"bgName": "zhihuidangjian",
+			"bgTitle": "智慧党建"
+		},
+		{
+			"id": 621,
+			"bgName": "zhLife",
+			"bgTitle": "中化生活"
+		},
+		{
+			"id": 621,
+			"bgName": "HSE",
+			"bgTitle": "HSE"
+		},
+		{
+			"id": 619,
+			"bgName": "zhihuisl",
+			"bgTitle": "新智慧商旅"
+		},
+		{
+			"id": 621,
+			"bgName": "xiaojia",
+			"bgTitle": "销假"
+		},
+		{
+			"id": 621,
+			"bgName": "xinguani",
+			"bgTitle": "新冠肺炎"
+		},
+		{
+			"id": 621,
+			"bgName": "qingjia",
+			"bgTitle": "请假"
+		},
+		{
+			"id": 620,
+			"bgName": "shitang",
+			"bgTitle": "智慧食堂"
+		},
+		{
+			"id": 621,
+			"bgName": "wubuzuhe",
+			"bgTitle": "五步组合论"
+		},
+		{
+			"id": 621,
+			"bgName": "yiqingtianbao",
+			"bgTitle": "疫情填报"
+		},
+		{
+			"id": 621,
+			"bgName": "yiwenjuan",
+			"bgTitle": "易问卷"
+		}
+	]
+}

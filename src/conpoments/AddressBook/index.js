@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Button, BackHandler } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Entypo from "react-native-vector-icons/Entypo";
 import { createStackNavigator } from '@react-navigation/stack';
 import AddressBookScreen from "./AddressBookScreen"
 import Depart from "./departPerson/Depart"
@@ -11,7 +12,7 @@ import PersonDetail from "./departPerson/PersonDetail"
 import SameDepart from "./SameDepart"
 
 import { useFocusEffect } from '@react-navigation/native';
-
+import TreasureBox from './TreasureBox'
 import Favorite from "./Favorite"
 import Home from "./Home"
 import SearchPerson from "./SearchPerson"
@@ -272,8 +273,32 @@ class AddressBook extends React.Component {
       default:
         return false;
     }
-  };
+  }
 
+
+  // 百宝箱
+  TreasureBoxStackScreen = () => {
+    return (
+      <Stack.Navigator
+      headerMode={this.state.headerModeVisible}
+      >
+        <Stack.Screen
+          name="TreasureBox"
+          component={TreasureBox}
+          options={{
+            title: '百宝箱',
+            headerStyle: {
+              backgroundColor
+            },
+            headerTintColor
+          }}
+        />
+
+
+      </Stack.Navigator>
+    );
+
+  }
   render() {
     return (
       <NavigationContainer>
@@ -285,6 +310,9 @@ class AddressBook extends React.Component {
               console.log('--', route.name)
               if (route.name === '首页') {
                 iconName = 'md-home'
+              } if (route.name === '百宝箱') {
+                iconName = 'ios-settings'
+                return <Entypo name={'box'} size={size} color={color} />;
               } if (route.name === '通讯录') {
                 iconName = 'ios-list-box'
               } else if (route.name === '设置') {
@@ -293,21 +321,20 @@ class AddressBook extends React.Component {
               color = focused ? backgroundColor : color;
 
               return <Ionicons name={iconName} size={size} color={color} />;
+
             }
 
           })}
-          // backBehavior="none"
 
           tabBarOptions={{
             activeTintColor: backgroundColor,
             inactiveTintColor: 'gray',
           }}
-        // screenOptions={({route}) => ({
-        //   tabBarVisible: this.getIsTabBarVisible(route),
-        // })}
+
         >
           <Tab.Screen name="首页" component={this.HomeStackScreen} />
-          <Tab.Screen name="通讯录" component={this.AddressStackScreen} />
+          <Tab.Screen name="百宝箱" component={this.TreasureBoxStackScreen} />
+          {/* <Tab.Screen name="通讯录" component={this.AddressStackScreen} /> */}
           <Tab.Screen name="设置" component={this.SettingsStackScreen} />
         </Tab.Navigator>
       </NavigationContainer>
