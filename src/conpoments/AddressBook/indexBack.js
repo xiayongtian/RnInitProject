@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { Text, View, StyleSheet, Button, BackHandler } from 'react-native';
+import { Text, View, StyleSheet, Button,BackHandler } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -9,8 +9,6 @@ import Depart from "./departPerson/Depart"
 import Person from "./departPerson/Person"
 import PersonDetail from "./departPerson/PersonDetail"
 import SameDepart from "./SameDepart"
-
-import { useFocusEffect } from '@react-navigation/native';
 
 import Favorite from "./Favorite"
 import Home from "./Home"
@@ -42,7 +40,7 @@ class AddressBook extends React.Component {
       initRouterName: "AddressBook"
     }
   }
-
+  
   setScale = () => {
     this.setState({
       // num: 3,
@@ -64,7 +62,7 @@ class AddressBook extends React.Component {
 
       // </View>
       <View>
-        <Home />
+        <Home/>
       </View>
     );
   }
@@ -125,10 +123,8 @@ class AddressBook extends React.Component {
       headerModeVisible: 'screen'
     })
   }
-  componentDidUpdate() {
-    // alert("123")
-  }
   back = () => {
+    alert('90')
     return <View><Text>90</Text></View>
   }
   //  通讯录
@@ -137,12 +133,12 @@ class AddressBook extends React.Component {
       <Stack.Navigator
         headerMode={this.state.headerModeVisible}
         initialRouteName={this.state.initRouterName}
-      // headerLeft={this.back}
-      // headerLeft={() => <HeaderBackButton
-      //   title="信息"//返回按钮的标题
-      //   tintColor='white'//返回按钮的颜色
-      //   // onPress={() => navigation.state.params.handleSave()}
-      // />}
+        // headerLeft={this.back}
+        // headerLeft={() => <HeaderBackButton
+        //   title="信息"//返回按钮的标题
+        //   tintColor='white'//返回按钮的颜色
+        //   // onPress={() => navigation.state.params.handleSave()}
+        // />}
 
 
       >
@@ -155,6 +151,7 @@ class AddressBook extends React.Component {
         //     backgroundColor
         //   },
         //   headerTintColor,
+
         // }}
         >
           {props => <AddressBookScreen {...props} setHeaderVisible={this.setHeaderMode} headerVisible={this.state.headerModeVisible} />}
@@ -247,42 +244,14 @@ class AddressBook extends React.Component {
   }
 
 
-  getIsTabBarVisible = (route) => {
-
-    // const routeName = route.state
-    //   ? route.state.routes[route.state.index].name
-    //   : route.params 
-    //     ? route.params.screen 
-    //     : '首页';
-
-    const routeName = route.state
-      ? route.state.routes[route.state.index].name
-      : "AddressBook"
-    // if(routeName=='AddressBook'){
-    //   // console.log('test',route.state)
-    //   this.setState({'headerModeVisible':'none'})
-    //   // alert("add")
-    // }
-    switch (routeName) {
-      case '首页':
-      case '通讯录': { }
-      case '设置':
-      case 'AddressBook':
-        return true;
-      default:
-        return false;
-    }
-  };
-
+  
   render() {
     return (
       <NavigationContainer>
         <Tab.Navigator
           screenOptions={({ route }) => ({
-            tabBarVisible: this.getIsTabBarVisible(route),
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
-              console.log('--', route.name)
               if (route.name === '首页') {
                 iconName = 'md-home'
               } if (route.name === '通讯录') {
@@ -293,8 +262,7 @@ class AddressBook extends React.Component {
               color = focused ? backgroundColor : color;
 
               return <Ionicons name={iconName} size={size} color={color} />;
-            }
-
+            },
           })}
           // backBehavior="none"
 
@@ -302,9 +270,6 @@ class AddressBook extends React.Component {
             activeTintColor: backgroundColor,
             inactiveTintColor: 'gray',
           }}
-        // screenOptions={({route}) => ({
-        //   tabBarVisible: this.getIsTabBarVisible(route),
-        // })}
         >
           <Tab.Screen name="首页" component={this.HomeStackScreen} />
           <Tab.Screen name="通讯录" component={this.AddressStackScreen} />
