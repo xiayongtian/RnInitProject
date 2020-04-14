@@ -28,7 +28,7 @@ class TreasureBox extends Component {
 
   componentDidMount() {
     AsyncStorage.getItem(
-      'recentList', (error, result) => {
+      'recentList4', (error, result) => {
         console.log(result)
         this.setState({
           recentVisitList: JSON.parse(result)
@@ -42,7 +42,7 @@ class TreasureBox extends Component {
     // AsyncStorage.removeItem('key', (error) => {
     // })
     AsyncStorage.getItem(
-      'recentList',
+      'recentList4',
       (error, result) => {
         if (error) {
         } else {
@@ -60,12 +60,17 @@ class TreasureBox extends Component {
             })
             tempArray = temp
           } else {
+            let temp=[]
+            temp.push(item)
+            this.setState({
+              recentVisitList: temp
+            })
             tempArray.push(item)
 
           }
           let tempData = JSON.stringify(tempArray);
           AsyncStorage.setItem(
-            'recentList',
+            'recentList4',
             tempData || [],
             (error, result) => {
               if (error) {
