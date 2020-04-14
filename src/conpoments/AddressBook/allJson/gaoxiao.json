@@ -17,54 +17,110 @@
 			"bgTitle": "新集团用印台账"
 		},
 		{
-			"id": 621,
+			"id": 622,
 			"bgName": "Im",
 			"bgTitle": "IM即时通讯"
 		},
 		{
-			"id": 619,
+			"id": 623,
 			"bgName": "cheliang",
 			"bgTitle": "车辆预订申请"
 		},
 		{
-			"id": 620,
+			"id": 624,
 			"bgName": "companyAdmin",
 			"bgTitle": "企业管理"
 		},
 		{
-			"id": 621,
+			"id": 625,
 			"bgName": "kefu",
 			"bgTitle": "热线客服"
 		},
 		{
-			"id": 621,
+			"id": 626,
 			"bgName": "mainData",
 			"bgTitle": "主数据"
 		},
 		{
-			"id": 621,
+			"id": 627,
 			"bgName": "TMS",
 			"bgTitle": "TMS"
 		},
 		{
-			"id": 620,
+			"id": 628,
 			"bgName": "companyAdmin",
 			"bgTitle": "企业管理"
 		},
 		{
-			"id": 621,
+			"id": 629,
 			"bgName": "kefu",
-			"bgTitle": "热线客服"
+			"bgTitle": "我的电话"
 		},
 		{
-			"id": 621,
+			"id": 630,
 			"bgName": "mainData",
-			"bgTitle": "主数据"
+			"bgTitle": "主数据123"
 		},
 		{
-			"id": 621,
+			"id": 627,
 			"bgName": "TMS",
 			"bgTitle": "TMS"
+		},
+		{
+			"id": 628,
+			"bgName": "companyAdmin",
+			"bgTitle": "企业管理"
+		},
+		{
+			"id": 629,
+			"bgName": "kefu",
+			"bgTitle": "我的电话"
+		},
+		{
+			"id": 630,
+			"bgName": "mainData",
+			"bgTitle": "主数据123"
+		},
+		{
+			"id": 631,
+			"bgName": "TMS",
+			"bgTitle": "企业"
+		},
+		{
+			"id": 632,
+			"bgName": "companyAdmin",
+			"bgTitle": "王者荣耀"
+		},
+		{
+			"id": 633,
+			"bgName": "kefu",
+			"bgTitle": "绝地求生"
+		},
+		{
+			"id": 634,
+			"bgName": "mainData",
+			"bgTitle": "貂蝉"
+		},
+		{
+			"id": 635,
+			"bgName": "TMS",
+			"bgTitle": "EMS"
+		},
+		{
+			"id": 635,
+			"bgName": "companyAdmin",
+			"bgTitle": "斗地主"
+		},
+		{
+			"id": 637,
+			"bgName": "kefu",
+			"bgTitle": "电子产品"
+		},
+		{
+			"id": 638,
+			"bgName": "mainData",
+			"bgTitle": "摄影"
 		}
+
 	]
 }

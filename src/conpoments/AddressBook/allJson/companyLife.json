@@ -2,62 +2,62 @@
 	"code": "2000",
 	"body": [
 		{
-			"id": 619,
+			"id": 700,
 			"bgName": "xinzhonghua",
 			"bgTitle": "新中化"
 		},
 		{
-			"id": 620,
+			"id": 701,
 			"bgName": "zhihuidangjian",
 			"bgTitle": "智慧党建"
 		},
 		{
-			"id": 621,
+			"id": 702,
 			"bgName": "zhLife",
 			"bgTitle": "中化生活"
 		},
 		{
-			"id": 621,
+			"id": 703,
 			"bgName": "HSE",
 			"bgTitle": "HSE"
 		},
 		{
-			"id": 619,
+			"id": 704,
 			"bgName": "zhihuisl",
 			"bgTitle": "新智慧商旅"
 		},
 		{
-			"id": 621,
+			"id": 705,
 			"bgName": "xiaojia",
 			"bgTitle": "销假"
 		},
 		{
-			"id": 621,
+			"id": 706,
 			"bgName": "xinguani",
 			"bgTitle": "新冠肺炎"
 		},
 		{
-			"id": 621,
+			"id":707,
 			"bgName": "qingjia",
 			"bgTitle": "请假"
 		},
 		{
-			"id": 620,
+			"id": 708,
 			"bgName": "shitang",
 			"bgTitle": "智慧食堂"
 		},
 		{
-			"id": 621,
+			"id": 709,
 			"bgName": "wubuzuhe",
 			"bgTitle": "五步组合论"
 		},
 		{
-			"id": 621,
+			"id": 710,
 			"bgName": "yiqingtianbao",
 			"bgTitle": "疫情填报"
 		},
 		{
-			"id": 621,
+			"id": 711,
 			"bgName": "yiwenjuan",
 			"bgTitle": "易问卷"
 		}
