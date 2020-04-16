@@ -4,62 +4,98 @@
 		{
 			"id": 700,
 			"bgName": "xinzhonghua",
-			"bgTitle": "新中化"
+			"bgTitle": "新中化",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 701,
 			"bgName": "zhihuidangjian",
-			"bgTitle": "智慧党建"
+			"bgTitle": "智慧党建",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 702,
 			"bgName": "zhLife",
-			"bgTitle": "中化生活"
+			"bgTitle": "中化生活",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 703,
 			"bgName": "HSE",
-			"bgTitle": "HSE"
+			"bgTitle": "HSE",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 704,
 			"bgName": "zhihuisl",
-			"bgTitle": "新智慧商旅"
+			"bgTitle": "新智慧商旅",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 705,
 			"bgName": "xiaojia",
-			"bgTitle": "销假"
+			"bgTitle": "销假",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 706,
 			"bgName": "xinguani",
-			"bgTitle": "新冠肺炎"
+			"bgTitle": "新冠肺炎",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
-			"id":707,
+			"id": 707,
 			"bgName": "qingjia",
-			"bgTitle": "请假"
+			"bgTitle": "请假",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 708,
 			"bgName": "shitang",
-			"bgTitle": "智慧食堂"
+			"bgTitle": "智慧食堂",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 709,
 			"bgName": "wubuzuhe",
-			"bgTitle": "五步组合论"
+			"bgTitle": "五步组合论",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 710,
 			"bgName": "yiqingtianbao",
-			"bgTitle": "疫情填报"
+			"bgTitle": "疫情填报",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		},
 		{
 			"id": 711,
 			"bgName": "yiwenjuan",
-			"bgTitle": "易问卷"
+			"bgTitle": "易问卷",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "companyLife"
 		}
 	]
 }

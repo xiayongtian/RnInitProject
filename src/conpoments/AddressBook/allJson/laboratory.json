@@ -4,12 +4,18 @@
 		{
 			"id": 800,
 			"bgName": "zhihuiyunpan",
-			"bgTitle": "智慧云盘"
+			"bgTitle": "智慧云盘",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "laboratory"
 		},
 		{
 			"id": 801,
 			"bgName": "yundayin",
-			"bgTitle": "云打印"
+			"bgTitle": "云打印",
+			"iconName": "pluscircle",
+			"iconColor": "#25ca77",
+			"type": "laboratory"
 		}
 	]
 }

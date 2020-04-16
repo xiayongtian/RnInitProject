@@ -28,7 +28,7 @@ class TreasureBox extends Component {
 
   componentDidMount() {
     AsyncStorage.getItem(
-      'recentList4', (error, result) => {
+      'recentList', (error, result) => {
         console.log(result)
         this.setState({
           recentVisitList: JSON.parse(result)
@@ -42,12 +42,14 @@ class TreasureBox extends Component {
     // AsyncStorage.removeItem('key', (error) => {
     // })
     AsyncStorage.getItem(
-      'recentList4',
+      'recentList',
       (error, result) => {
         if (error) {
         } else {
           let tempArray = [];
+          // 判断是否是初次点击
           if (result) {
+            
             console.log("取得Storage数值", result)
             let oldList = JSON.parse(result)
             // 去重
@@ -60,6 +62,7 @@ class TreasureBox extends Component {
             })
             tempArray = temp
           } else {
+
             let temp=[]
             temp.push(item)
             this.setState({
@@ -70,7 +73,7 @@ class TreasureBox extends Component {
           }
           let tempData = JSON.stringify(tempArray);
           AsyncStorage.setItem(
-            'recentList4',
+            'recentList',
             tempData || [],
             (error, result) => {
               if (error) {
@@ -91,6 +94,7 @@ class TreasureBox extends Component {
         <View style={styles.base}>
           <ScrollView>
             <View style={{ flex: 1 }}>
+            {/* 这里只需要一个蓝白的图片即可，这张图片蓝色高度部分到最近访问高度的一半，下面就是白色的 */}
               <ImageBackground source={require('../../../assets/bg.jpg')} imageStyle={{ borderRadius: 5 }} style={styles.bg}>
                 {/* 天气，地点 */}
                 <View style={styles.tianqiContain}>
@@ -173,7 +177,6 @@ class TreasureBox extends Component {
                   {companyLife && companyLife.body.map(item => {
                     return (
                       <TouchableOpacity onPress={() => this.saveRecentVisit(item)} style={styles.content}>
-
                         <View>
                           <ImageBackground source={baibao[item.bgName]} imageStyle={{}} style={styles.imageStyle}>
                           </ImageBackground>

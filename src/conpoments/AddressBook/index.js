@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { Text, View, StyleSheet, Button, BackHandler } from 'react-native';
+import React, { forwardRef,createRefuseState, useCallback, useEffect, useRef } from 'react';
+import { Text, View, StyleSheet, Button, BackHandler, AsyncStorage } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -10,6 +10,7 @@ import Depart from "./departPerson/Depart"
 import Person from "./departPerson/Person"
 import PersonDetail from "./departPerson/PersonDetail"
 import SameDepart from "./SameDepart"
+import SetApply from "../AddressBook/Home/SetApply"
 
 import { useFocusEffect } from '@react-navigation/native';
 import TreasureBox from './TreasureBox'
@@ -22,6 +23,19 @@ const Tab = createBottomTabNavigator();
 let backgroundColor = "#3385ff"
 let headerTintColor = '#fff'
 const styles = StyleSheet.create({
+  headerTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+  },
+  headerText: {
+    color: '#FFFFFF',
+    fontSize: 17,
+    fontWeight: '500',
+    marginRight: 4,
+  },
   base: {
     color: "#000",
     fontSize: 17,
@@ -40,8 +54,10 @@ class AddressBook extends React.Component {
       num: 1,
       rt: "xiwei",
       headerModeVisible: "none",
-      initRouterName: "AddressBook"
+      initRouterName: "AddressBook",
+      applyList: []
     }
+    // this.ref = createRef();
   }
 
   setScale = () => {
@@ -52,38 +68,57 @@ class AddressBook extends React.Component {
       console.log(this.state.rt)
     })
   }
-  HomeScreen = () => {
+  LogoTitle = () => {
     return (
-      // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      //   <Text>{this.state.rt}</Text>
-      //   <Button
-      //     onPress={() => this.setScale()}
-      //     title="Learn More"
-      //     color="#841584"
-      //     accessibilityLabel="Learn more about this purple button"
-      //   />
-
-      // </View>
-      <View>
-        <Home />
-      </View>
+      <View><Text>123</Text></View>
     );
   }
-  HomeStackScreen = () => {
+
+ 
+
+
+  saveApply = (data) => {
+    // this.refs.setApply.saveApply()
+
+   
+
+
+  }
+  HomeStackScreen = ({ navigation }) => {
     return (
-      <Stack.Navigator>
+      <Stack.Navigator
+        headerMode={'none'}
+        
+        header={null}
+      >
+        {/* 首页 */}
         <Stack.Screen
           name="Home"
-          component={this.HomeScreen}
-          options={{
-            title: '首页',
-            headerStyle: {
-              backgroundColor
-            },
+        >
+          {props => <Home {...props} applyList={this.state.applyList} setHeaderVisible={this.setHeaderMode} headerVisible={this.state.headerModeVisible} />}
+        </Stack.Screen>
 
-            headerTintColor
-          }}
-        />
+        {/* 编辑首页应用页面 */}
+        <Stack.Screen
+          name="SetApply"
+          // component={SetApply}
+          // component={this.test}
+          options={{
+            title: '编辑首页应用',
+            // header: null,
+            // headerStyle: {
+            //   backgroundColor
+            // },
+            // headerTintColor,
+            // headerRight: () => (
+            //   <View><Text onPress={this.saveApply} style={{ marginRight: 10, color: '#fff' }}>保存</Text></View>
+            // ),
+          }}>
+          {/* <SetApply ref="setApplys" saveApply={this.saveApply}/> */}
+          {props => <SetApply {...props}  saveApply={this.saveApply}/>}
+        </Stack.Screen>
+
+
       </Stack.Navigator>
     );
   }
@@ -247,7 +282,7 @@ class AddressBook extends React.Component {
     );
   }
 
-
+  //  控制tab是否显示
   getIsTabBarVisible = (route) => {
 
     // const routeName = route.state
@@ -255,7 +290,7 @@ class AddressBook extends React.Component {
     //   : route.params 
     //     ? route.params.screen 
     //     : '首页';
-
+    console.log()
     const routeName = route.state
       ? route.state.routes[route.state.index].name
       : "AddressBook"
@@ -265,9 +300,7 @@ class AddressBook extends React.Component {
     //   // alert("add")
     // }
     switch (routeName) {
-      case '首页':
-      case '通讯录': { }
-      case '设置':
+      case 'Home': return true;
       case 'AddressBook':
         return true;
       default:
@@ -280,7 +313,7 @@ class AddressBook extends React.Component {
   TreasureBoxStackScreen = () => {
     return (
       <Stack.Navigator
-      headerMode={this.state.headerModeVisible}
+        headerMode={this.state.headerModeVisible}
       >
         <Stack.Screen
           name="TreasureBox"
