@@ -135,7 +135,7 @@ class TreasureBox extends Component {
                         </View>
 
                         <View>
-                          <Text style={styles.itemText}>{item.bgTitle}</Text>
+                          <Text style={styles.itemText} numberOfLines={1}>{item.bgTitle}</Text>
                         </View>
                       </View>
                     })}
@@ -159,7 +159,7 @@ class TreasureBox extends Component {
                         </View>
 
                         <View>
-                          <Text style={styles.itemText}>{item.bgTitle}</Text>
+                          <Text style={styles.itemText} numberOfLines={1}>{item.bgTitle}</Text>
                         </View>
                         {/* </View> */}
                       </TouchableOpacity>
@@ -182,7 +182,7 @@ class TreasureBox extends Component {
                           </ImageBackground>
                         </View>
                         <View>
-                          <Text style={styles.itemText}>{item.bgTitle}</Text>
+                          <Text style={styles.itemText} numberOfLines={1}>{item.bgTitle}</Text>
                         </View>
                       </TouchableOpacity>
                     )
@@ -206,7 +206,7 @@ class TreasureBox extends Component {
                           </ImageBackground>
                         </View>
                         <View>
-                          <Text style={styles.itemText}>{item.bgTitle}</Text>
+                          <Text style={styles.itemText} numberOfLines={1}>{item.bgTitle}</Text>
                         </View>
                       </TouchableOpacity>
                     )
