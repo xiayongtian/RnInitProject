@@ -53,7 +53,7 @@ class ToDoSwiper extends Component {
                   <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
                 </View >
                 <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
                   <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
                 </View>
               </View>
@@ -62,7 +62,7 @@ class ToDoSwiper extends Component {
                   <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
                 </View >
                 <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
                   <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
                 </View>
               </View>
@@ -71,39 +71,7 @@ class ToDoSwiper extends Component {
                   <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
                 </View >
                 <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
-                  <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
-                </View>
-              </View>
-            </View>
-
-          </View>
-          <View>
-            <View>
-              <View style={{ marginBottom: 5, borderBottomColor: "#c1c1c1", borderBottomWidth: 1 }}>
-                <View style={{ marginBottom: 5 }}>
-                  <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
-                </View >
-                <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
-                  <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
-                </View>
-              </View>
-              <View style={{ marginBottom: 5, borderBottomColor: "#c1c1c1", borderBottomWidth: 1 }}>
-                <View style={{ marginBottom: 5 }}>
-                  <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
-                </View >
-                <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
-                  <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
-                </View>
-              </View>
-              <View style={{ marginBottom: 5, borderBottomColor: "#c1c1c1", borderBottomWidth: 1 }}>
-                <View style={{ marginBottom: 5 }}>
-                  <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
-                </View >
-                <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
                   <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
                 </View>
               </View>
@@ -117,7 +85,7 @@ class ToDoSwiper extends Component {
                   <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
                 </View >
                 <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
                   <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
                 </View>
               </View>
@@ -126,7 +94,7 @@ class ToDoSwiper extends Component {
                   <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
                 </View >
                 <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
                   <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
                 </View>
               </View>
@@ -135,7 +103,39 @@ class ToDoSwiper extends Component {
                   <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
                 </View >
                 <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
-                  <Text style={{ color: '#c1c1c1' }}>吴建刚</Text>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
+                  <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
+                </View>
+              </View>
+            </View>
+
+          </View>
+          <View>
+            <View>
+              <View style={{ marginBottom: 5, borderBottomColor: "#c1c1c1", borderBottomWidth: 1 }}>
+                <View style={{ marginBottom: 5 }}>
+                  <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
+                </View >
+                <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
+                  <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
+                </View>
+              </View>
+              <View style={{ marginBottom: 5, borderBottomColor: "#c1c1c1", borderBottomWidth: 1 }}>
+                <View style={{ marginBottom: 5 }}>
+                  <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
+                </View >
+                <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
+                  <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
+                </View>
+              </View>
+              <View style={{ marginBottom: 5, borderBottomColor: "#c1c1c1", borderBottomWidth: 1 }}>
+                <View style={{ marginBottom: 5 }}>
+                  <Text style={{ fontSize: 15, fontWeight: 'bold', }}><Text style={{ color: '#4b7ae3' }}>【TMS】</Text>请审批:销售订单DD45</Text>
+                </View >
+                <View style={{ marginBottom: 5, flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingRight: 10 }}>
+                  <Text style={{ color: '#c1c1c1' }}>XXX</Text>
                   <Text style={{ alignItems: 'flex-end', color: '#c1c1c1' }}>04-10 16:20</Text>
                 </View>
               </View>

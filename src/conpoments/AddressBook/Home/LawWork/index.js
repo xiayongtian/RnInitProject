@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, AsyncStorage, } from 'react-native'
+import Entypo from "react-native-vector-icons/Entypo";
 
 class LawWork extends Component {
   constructor(props) {
@@ -19,7 +20,11 @@ class LawWork extends Component {
             <Text style={{ marginLeft: 10, fontSize: 17, fontWeight: 'bold' }}>2019年法律工作会议</Text>
           </View>
           <View style={styles.titleRight}>
-            <ImageBackground source={require('../../../../assets/io.png')} style={{ width: 30, height: 30, }}></ImageBackground>
+            {/* <ImageBackground source={require('../../../../assets/io.png')} style={{ width: 30, height: 30, }}></ImageBackground> */}
+           
+            <View style={{ width: 40, height: 25, borderRadius: 25, backgroundColor: '#f6f6f5', justifyContent: 'center', alignItems: 'center' }}>
+              <Entypo name={"tablet-mobile-combo"} size={15} color={"#000"} />
+            </View>
             <View style={styles.viewALl}>
               <Text style={styles.viewAllContent}>查看全部</Text>
             </View>
