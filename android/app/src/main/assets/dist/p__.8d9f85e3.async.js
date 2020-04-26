@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[2],{QeBL:function(e,r,t){"use strict";t.r(r);var n=t("ArA+");r["default"]=function(){var e=localStorage.getItem("app-token"),r=!!e;return r?n["router"].replace("/app"):n["router"].replace("/login"),null}},o2JA:function(e,r,t){"use strict"}}]);

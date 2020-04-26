@@ -11,6 +11,7 @@ import Person from "./departPerson/Person"
 import PersonDetail from "./departPerson/PersonDetail"
 import SameDepart from "./SameDepart"
 import SetApply from "../AddressBook/Home/SetApply"
+import Setting from "./Setting"
 
 import { useFocusEffect } from '@react-navigation/native';
 import TreasureBox from './TreasureBox'
@@ -125,7 +126,8 @@ class AddressBook extends React.Component {
   SettingsScreen = () => {
     return (
       <View style={{ flex: 1 }}>
-
+      {/* <Text> 辅导费</Text> */}
+          <Setting/>
       </View>
     );
   }
